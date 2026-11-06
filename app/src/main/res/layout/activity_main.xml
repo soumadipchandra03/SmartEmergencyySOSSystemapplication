@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <!-- ================= HOME ================= -->
+    <LinearLayout
+        android:id="@+id/layoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMART ENERGY SOS"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#202A44"
+            android:layout_marginBottom="35dp"/>
+
+        <Button
+            android:id="@+id/btnSOS"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="SOS"
+            android:textSize="24sp"
+            android:backgroundTint="#E53935"/>
+
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:text="Call Emergency (112)"
+            android:backgroundTint="#FB8C00"/>
+
+        <Button
+            android:id="@+id/btnContacts"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:text="Emergency Contacts"/>
+
+        <Button
+            android:id="@+id/btnMedical"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:text="Medical Information"/>
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:text="SOS History"/>
+    </LinearLayout>
+
+    <!-- ================= CONTACTS ================= -->
+    <LinearLayout
+        android:id="@+id/layoutContacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emergency Contacts"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#202A44"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone number"
+            android:inputType="phone"/>
+
+        <Button
+            android:id="@+id/btnSaveContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Save Contact"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Long-press a contact to delete"
+            android:textSize="12sp"
+            android:layout_marginTop="12dp"/>
+
+        <ListView
+            android:id="@+id/listContacts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnBackContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"/>
+    </LinearLayout>
+
+    <!-- ================= MEDICAL ================= -->
+    <ScrollView
+        android:id="@+id/layoutMedical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical Information"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#202A44"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etBlood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Blood group (e.g. B+)"/>
+
+            <EditText
+                android:id="@+id/etAllergies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Allergies"/>
+
+            <EditText
+                android:id="@+id/etConditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Medical conditions"/>
+
+            <EditText
+                android:id="@+id/etMedicines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Current medicines"/>
+
+            <Button
+                android:id="@+id/btnSaveMedical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Save"/>
+
+            <Button
+                android:id="@+id/btnBackMedical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= HISTORY ================= -->
+    <LinearLayout
+        android:id="@+id/layoutHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOS History"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#202A44"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnClearHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear History"/>
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No SOS events yet"
+            android:layout_marginTop="16dp"/>
+
+        <ListView
+            android:id="@+id/listHistory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnBackHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"/>
+    </LinearLayout>
+
+</FrameLayout>
